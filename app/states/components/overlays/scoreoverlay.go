@@ -684,11 +684,11 @@ func (overlay *ScoreOverlay) DrawHUD(batch *batch.QuadBatch, _ []color2.Color, a
 
 		batch.SetColor(0, 0, 0, alpha*0.8)
 
-		hudFont.DrawOrigin(batch, overlay.ScaledWidth*0.5+1, overlay.ScaledHeight*0.1+1, vector.Centre, 25, false, "MODIFIED REPLAY")
+		hudFont.DrawOrigin(batch, overlay.ScaledWidth*0.5+1, overlay.ScaledHeight*0.1+1, vector.Centre, 25, false, " ")
 
 		batch.SetColor(1, 1, 1, alpha)
 
-		hudFont.DrawOrigin(batch, overlay.ScaledWidth*0.5, overlay.ScaledHeight*0.1, vector.Centre, 25, false, "MODIFIED REPLAY")
+		hudFont.DrawOrigin(batch, overlay.ScaledWidth*0.5, overlay.ScaledHeight*0.1, vector.Centre, 25, false, " ")
 	}
 
 	if overlay.panel != nil {
