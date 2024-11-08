@@ -112,8 +112,8 @@ func (pp *PPv2) Calculate(attribs api.Attributes, score api.PerfScore, diff *dif
 		mehMultiplier := 1.0
 
 		if diff.ODReal > 0.0 {
-			okMultiplier = max(0.0, 1-math.Pow(diff.ODReal/13.33, 1.8))
-			mehMultiplier = max(0.0, 1-math.Pow(diff.ODReal/13.33, 5))
+			okMultiplier = max(1.0, 1-math.Pow(diff.ODReal/13.33, 1.8))
+			mehMultiplier = max(1.0, 1-math.Pow(diff.ODReal/13.33, 5))
 		}
 
 		pp.effectiveMissCount = min(pp.effectiveMissCount+float64(pp.score.CountOk)*okMultiplier+float64(pp.score.CountMeh)*mehMultiplier, float64(pp.totalHits))
